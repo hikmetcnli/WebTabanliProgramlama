@@ -1,4 +1,7 @@
-﻿
+﻿@using Hafta3.Models
+
+@model List<Yazarlar>
+
 <h1>Yazar Listesi</h1>
 <hr />
 <table class="table table-dark table-hover">
@@ -9,17 +12,15 @@
         <th>Adresi</th>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>HİKMET</td>
-            <td>CANLI</td>
-            <td>İSTANBUL</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>MEHMET AKİF</td>
-            <td>ERSOY</td>
-            <td>İSTANBUL</td>
-        </tr>
+        @foreach(var dr in Model)
+        {
+            <tr>
+                <td>@dr.No</td>
+                <td>@dr.Ad</td>
+                <td>@dr.Soyad</td>
+                <td>@dr.Adres</td>
+            </tr>
+        }
+         
     </tbody>
 </table>
