@@ -7,6 +7,8 @@ var app = builder.Build();
 
 //app.MapGet("/", () => "Hello World!");
 
+app.UseStaticFiles();
+
 /*Home/Index default olarak çaðrýlmasýný saðlýyor.*/
 app.MapControllerRoute(name: "default",
     pattern: "{controller=Home}/{action=Index}"
